@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { DressesComponent } from './dresses/dresses.component';
+import { AngularFormsComponent } from './angular-forms/angular-forms.component';
 const routes: Routes = [
   {path:'mobiles',component:MobilesComponent },
-  {path:'dresses',component:DressesComponent}
+  {path:'dresses',component:DressesComponent},
+  {path:'forms',component:AngularFormsComponent}
 ];
 
 @NgModule({
@@ -12,4 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[MobilesComponent ,DressesComponent]
+export const routingComponents=[MobilesComponent ,DressesComponent,AngularFormsComponent ]
