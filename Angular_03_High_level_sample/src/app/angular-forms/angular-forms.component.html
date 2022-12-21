@@ -1,5 +1,33 @@
-<p>angular-forms works!</p>
 
-<form action="">
-   <label for="">Enter Username: </label> <input type="text">
-</form>
+
+    {{userModel|json}}
+    <div class="form">
+        <form action="" #formdata="ngForm">
+            {{formdata.value|json}} <hr>
+            <label for="">Enter Name:</label>
+            <input type="text" name="user" id="" [(ngModel)]="userModel.name">
+    <br>
+        <label for="">Enter email:</label>
+        <input type="email" name="email" id="" [(ngModel)]="userModel.email">
+    <br>
+    
+    <label for="">Enter Phone Number</label>
+    <input type="number" name="PhoneNumber" id="" [(ngModel)]="userModel.phone">
+    <br>
+    <label>Choose a size</label>
+    <select name="shirtSize" id="" [(ngModel)]="userModel.shirtSize" >
+        <option value="">Shirt Size</option>
+        <option value=""*ngFor="let i in shirts">{{i}}</option>
+    </select>
+    <br>
+    <input type="checkbox" name="terms" id="" [(ngModel)]="userModel.Terms">
+    <label for="">Terms & Policies</label>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+    
+    <div *ngFor="let shirt in shirtSize">
+    {{shirt}}
+    </div>
+    

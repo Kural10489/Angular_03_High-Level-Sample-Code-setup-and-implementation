@@ -10,11 +10,11 @@ import { AngularFormsComponent } from './angular-forms/angular-forms.component';
   declarations: [
     AppComponent,
     routingComponents,
-    // FormsModule,
     AngularFormsComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
