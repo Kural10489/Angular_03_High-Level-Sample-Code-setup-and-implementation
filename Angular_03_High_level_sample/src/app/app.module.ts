@@ -5,6 +5,7 @@ import { AppRoutingModule ,routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { AngularFormsComponent } from './angular-forms/angular-forms.component';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AngularFormsComponent } from './angular-forms/angular-forms.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

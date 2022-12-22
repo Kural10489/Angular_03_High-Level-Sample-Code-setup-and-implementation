@@ -6,6 +6,6 @@ import { User } from '../user';
   styleUrls: ['./angular-forms.component.scss']
 })
 export class AngularFormsComponent {
-shirts=['S','M','L']
+public shirts=['S','M','L']
 userModel=new User('kural','','','',9080724529,true);
 }

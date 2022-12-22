@@ -1,33 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
 
+  {{userModel|json}}
+  <div class="form">
+    <form action="" #formdata="ngForm">
+      {{formdata.value|json}}
+      <hr>
+      Untouched: {{name.untouched}} <br>
+      Touched: {{name.touched}} <br>
+      Feild Value Changed: {{name.dirty}}
+      <hr>
+      <label for="">Enter Name:</label>
+      <input type="text" name="user" class="is-invalid " [(ngModel)]="userModel.name" #name="ngModel" pattern="{4}">
+      <br>
+      <label for="">Enter email:</label>
+      <input type="email" name="email" id="" [(ngModel)]="userModel.email">
+      <br>
 
-    {{userModel|json}}
-    <div class="form">
-        <form action="" #formdata="ngForm">
-            {{formdata.value|json}} <hr>
-            <label for="">Enter Name:</label>
-            <input type="text" name="user" id="" [(ngModel)]="userModel.name">
-    <br>
-        <label for="">Enter email:</label>
-        <input type="email" name="email" id="" [(ngModel)]="userModel.email">
-    <br>
-    
-    <label for="">Enter Phone Number</label>
-    <input type="number" name="PhoneNumber" id="" [(ngModel)]="userModel.phone">
-    <br>
-    <label>Choose a size</label>
-    <select name="shirtSize" id="" [(ngModel)]="userModel.shirtSize" >
+      <label for="">Enter Phone Number</label>
+      <input type="number" name="PhoneNumber" id="" [(ngModel)]="userModel.phone">
+      <br>
+      <label>Choose a size</label>
+      <select name="shirtSize" id="" [(ngModel)]="userModel.shirtSize">
         <option value="">Shirt Size</option>
-        <option value=""*ngFor="let i in shirts">{{i}}</option>
-    </select>
-    <br>
-    <input type="checkbox" name="terms" id="" [(ngModel)]="userModel.Terms">
-    <label for="">Terms & Policies</label>
-    <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+        <option value="" *ngFor="let i of shirts">{{i}}</option>
+      </select>
+      <br>
+      <input type="checkbox" name="terms" id="" [(ngModel)]="userModel.Terms">
+      <label for="">Terms & Policies</label>
+      <br>
+      <button type="submit" class="btn btn-danger">Submit</button>
     </form>
-    </div>
-    
-    <div *ngFor="let shirt in shirtSize">
-    {{shirt}}
-    </div>
-    
+  </div>
+
+
+
+
+</body>
+</html>
