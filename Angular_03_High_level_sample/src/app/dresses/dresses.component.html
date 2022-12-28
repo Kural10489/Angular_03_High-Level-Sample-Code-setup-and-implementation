@@ -36,3 +36,8 @@
 </div>
 
 </div>
+<ul class="list-group">
+  <li  *ngFor="let cloth of clothingtypes">
+    <span (click)="onSelect(clothingtypes)" class="list-group-item">{{cloth.id}}) {{cloth.name}}</span>
+  </li>
+</ul>

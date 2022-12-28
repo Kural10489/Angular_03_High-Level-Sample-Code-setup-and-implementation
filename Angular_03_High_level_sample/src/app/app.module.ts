@@ -5,13 +5,23 @@ import { AppRoutingModule ,routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { AngularFormsComponent } from './angular-forms/angular-forms.component';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProductsComponent } from './products/products.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { MathsService } from './services/maths.service';
+import { DependencyComponent } from './dependency/dependency.component';
+import { DependencySepareteConfigComponent } from './dependency-separete-config/dependency-separete-config.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    AngularFormsComponent
+    AngularFormsComponent,
+    PagenotfoundComponent,
+    ProductsComponent,
+    DependencyInjectionComponent,
+    DependencyComponent,
+    DependencySepareteConfigComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +29,7 @@ import { AngularFormsComponent } from './angular-forms/angular-forms.component';
     AppRoutingModule,
     // NgbModule
   ],
-  providers: [],
+  providers: [MathsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
